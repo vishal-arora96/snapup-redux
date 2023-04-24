@@ -26,7 +26,7 @@ const ProductSinglePage = () => {
   // getting single product
   useEffect(() => {
     dispatch(fetchAsyncProductSingle(id));
-  }, [dispatch]);
+  }, [dispatch, id]);
 
   let discountedPrice =
     product?.price - product?.price * (product?.discountPercentage / 100);

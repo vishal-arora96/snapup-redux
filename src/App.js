@@ -7,19 +7,14 @@ import {
   CategoryProduct,
   ProductSingle,
   Cart,
-  Search
+  Search,
+  CheckoutPage
 } from "./pages";
 import Header from "./components/Header/Header";
 import { Provider } from "react-redux";
 import store from "./store/store";
 import Sidebar from "./components/Sidebar/Sidebar";
-import ProductSinglePage from "./pages/ProductSinglePage/ProductSinglePage";
-import CategoryProductPage from "./pages/CategoryProductPage/CategoryProductPage";
-import CartPage from "./pages/CartPage/CartPage";
-import SearchPage from "./pages/SearchPage/SearchPage";
 import Footer from "./components/Footer/Footer";
-import CheckoutPage from "./pages/CheckoutPage/CheckoutPage";
-//components
 
 function App() {
   return (
@@ -30,10 +25,10 @@ function App() {
           <Sidebar />
           <Routes>
             <Route path="/" Component={HomePage} />
-            <Route path="/product/:id" Component={ProductSinglePage} />
-            <Route path="/category/:category" Component={CategoryProductPage} />
-            <Route path="/cart" Component={CartPage} />
-            <Route path="/search/:searchTerm" Component={SearchPage} />
+            <Route path="/product/:id" Component={ProductSingle} />
+            <Route path="/category/:category" Component={CategoryProduct} />
+            <Route path="/cart" Component={Cart} />
+            <Route path="/search/:searchTerm" Component={Search} />
             <Route path="/checkout" Component={CheckoutPage} />
           </Routes>
           <Footer />

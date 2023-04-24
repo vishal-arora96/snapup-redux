@@ -85,7 +85,7 @@ function CartPage() {
                         type="button"
                         className="qty-decrease flex align-center justify-center"
                         onClick={() => {
-                          if (cart?.quantity == 1) {
+                          if (cart?.quantity === 1) {
                             dispatch(removeFromCart(cart?.id));
                             toast.info("Item removed from cart!");
                           } else

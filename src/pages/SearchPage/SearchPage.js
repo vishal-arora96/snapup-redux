@@ -8,7 +8,6 @@ import ProductList from "../../components/ProductList/ProductList";
 import {
   fetchAsyncSearchProduct,
   getSearchProducts,
-  setSearchTerm,
   getSearchProductsStatus,
   clearSearch
 } from "../../store/searchSlice";
@@ -22,7 +21,7 @@ const SearchPage = () => {
   useEffect(() => {
     dispatch(clearSearch());
     dispatch(fetchAsyncSearchProduct(searchTerm));
-  }, [searchTerm]);
+  }, [searchTerm, dispatch]);
 
   if (searchProducts.length === 0) {
     return (

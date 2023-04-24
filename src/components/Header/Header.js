@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import Navbar from "../Navbar/Navbar";
 import "./Header.scss";
 
@@ -19,6 +18,7 @@ function Header() {
                         href="https://www.facebook.com"
                         target="_blank"
                         className="fs-15"
+                        rel="noreferrer"
                       >
                         <i className="fab fa-facebook"></i>
                       </a>
@@ -28,6 +28,7 @@ function Header() {
                         href="https://www.instagram.com"
                         target="_blank"
                         className="fs-15"
+                        rel="noreferrer"
                       >
                         <i className="fab fa-instagram"></i>
                       </a>
