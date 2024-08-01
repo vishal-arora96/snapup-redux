@@ -54,7 +54,7 @@ export const fetchAsyncProductsOfCategory = createAsyncThunk(
   }
 );
 
-export const getAllCategories = (state) => state.category.categories;
+export const getAllCategories = (state) => state.category.categories.map((category)=>category.name);
 export const getAllProductsByCategory = (state) =>
   state.category.categoryProducts;
 export const getCategoryProductsStatus = (state) =>
